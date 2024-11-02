@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Пользователи" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ПользователиРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Page name="ПользователиИБ" id="32">
+					<UserVisible>
+						<xr:Common>true</xr:Common>
+						<xr:Value name="Role.Администратор">true</xr:Value>
+						<xr:Value name="Role.Пользователь">false</xr:Value>
+						<xr:Value name="Role.ВыгружательCF">false</xr:Value>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователи ИБ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователи ИБ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПользователиИБРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="61">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="62"/>
+							<ChildItems>
+								<Button name="Добавить" id="63">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<Width>10</Width>
+									<CommandName>Form.Item.ТЗПользователиИБ.StandardCommand.Add</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Добавить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ДобавитьРасширеннаяПодсказка" id="64"/>
+								</Button>
+								<Button name="Удалить" id="65">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<Width>10</Width>
+									<CommandName>Form.Item.ТЗПользователиИБ.StandardCommand.Delete</CommandName>
+									<ExtendedTooltip name="УдалитьРасширеннаяПодсказка" id="66"/>
+								</Button>
+								<Button name="Обновить" id="67">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<Width>10</Width>
+									<CommandName>Form.Command.Обновить</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.Refresh</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="68"/>
+								</Button>
+								<Button name="ОтменитьПоиск" id="59">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<Width>14</Width>
+									<CommandName>Form.Item.ТЗПользователиИБ.StandardCommand.CancelSearch</CommandName>
+									<ExtendedTooltip name="ОтменитьПоискРасширеннаяПодсказка" id="60"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ТЗПользователиИБ" id="34">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<SearchOnInput>Use</SearchOnInput>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ТЗПользователиИБ</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЗПользователиИБКонтекстноеМеню" id="35"/>
+							<AutoCommandBar name="ТЗПользователиИБКоманднаяПанель" id="36">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТЗПользователиИБРасширеннаяПодсказка" id="37"/>
+							<SearchStringAddition name="ТЗПользователиИБСтрокаПоиска" id="38">
+								<AdditionSource>
+									<Item>ТЗПользователиИБ</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗПользователиИБСтрокаПоискаКонтекстноеМеню" id="41"/>
+								<ExtendedTooltip name="ТЗПользователиИБСтрокаПоискаРасширеннаяПодсказка" id="42"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЗПользователиИБСостояниеПросмотра" id="43">
+								<AdditionSource>
+									<Item>ТЗПользователиИБ</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗПользователиИБСостояниеПросмотраКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="ТЗПользователиИБСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЗПользователиИБУправлениеПоиском" id="48">
+								<AdditionSource>
+									<Item>ТЗПользователиИБ</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗПользователиИБУправлениеПоискомКонтекстноеМеню" id="51"/>
+								<ExtendedTooltip name="ТЗПользователиИБУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТЗПользователиИБВыбор</Event>
+								<Event name="BeforeAddRow">ТЗПользователиИБПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ТЗПользователиИБПередУдалением</Event>
+								<Event name="BeforeRowChange">ТЗПользователиИБПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ПользователиИБ1Имя" id="53">
+									<DataPath>ТЗПользователиИБ.Имя</DataPath>
+									<ContextMenu name="ПользователиИБ1ИмяКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ПользователиИБ1ИмяРасширеннаяПодсказка" id="55"/>
+								</InputField>
+								<InputField name="ПользователиИБ1ПолноеИмя" id="56">
+									<DataPath>ТЗПользователиИБ.ПолноеИмя</DataPath>
+									<ContextMenu name="ПользователиИБ1ПолноеИмяКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ПользователиИБ1ПолноеИмяРасширеннаяПодсказка" id="58"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СправочникПользователи" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Пользователи"</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник пользователи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СправочникПользователиРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<Table name="Список" id="3">
+							<Representation>List</Representation>
+							<CommandBarLocation>Top</CommandBarLocation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<UserSettingsGroup>1:02023637-7868-4a5f-8576-835a76e0c9ba</UserSettingsGroup>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="СписокКоманднаяПанель" id="5"/>
+							<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+							<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="10"/>
+								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="11"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСостояниеПросмотра" id="12">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУправлениеПоиском" id="17">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="20"/>
+								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="Код" id="25">
+									<DataPath>Список.Code</DataPath>
+									<ContextMenu name="КодКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="КодРасширеннаяПодсказка" id="27"/>
+								</LabelField>
+								<LabelField name="Наименование" id="22">
+									<DataPath>Список.Description</DataPath>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="24"/>
+								</LabelField>
+								<LabelField name="ИмяКомпьютера" id="72">
+									<DataPath>Список.ИмяКомпьютера</DataPath>
+									<ContextMenu name="ИмяКомпьютераКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ИмяКомпьютераРасширеннаяПодсказка" id="74"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Пользователи</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТЗПользователиИБ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЗПользователи ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПолноеИмя" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полное имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Обновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Обновить</Action>
+		</Command>
+	</Commands>
+</Form>

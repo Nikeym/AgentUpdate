@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Заполнить даты релизов</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Даты" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Даты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Даты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ДатыРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<InputField name="СДаты" id="4">
+					<DataPath>СДаты</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заполнить с даты</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СДатыКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СДатыРасширеннаяПодсказка" id="6"/>
+					<Events>
+						<Event name="OnChange">СДатыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПоДату" id="7">
+					<DataPath>ПоДату</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПоДатуКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ПоДатуРасширеннаяПодсказка" id="9"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТестовыеКонтуры" id="12">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ТестовыеКонтуры</DataPath>
+			<CommandSet>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТестовыеКонтурыКонтекстноеМеню" id="13"/>
+			<AutoCommandBar name="ТестовыеКонтурыКоманднаяПанель" id="14">
+				<ChildItems>
+					<Button name="ТестовыеКонтурыПереместитьВверх" id="41">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Item.ТестовыеКонтуры.StandardCommand.MoveUp</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ТестовыеКонтурыПереместитьВверхРасширеннаяПодсказка" id="42"/>
+					</Button>
+					<Button name="ТестовыеКонтурыПереместитьВниз" id="43">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ТестовыеКонтуры.StandardCommand.MoveDown</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ТестовыеКонтурыПереместитьВнизРасширеннаяПодсказка" id="44"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТестовыеКонтурыРасширеннаяПодсказка" id="15"/>
+			<SearchStringAddition name="ТестовыеКонтурыСтрокаПоиска" id="16">
+				<AdditionSource>
+					<Item>ТестовыеКонтуры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТестовыеКонтурыСтрокаПоискаКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="ТестовыеКонтурыСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТестовыеКонтурыСостояниеПросмотра" id="21">
+				<AdditionSource>
+					<Item>ТестовыеКонтуры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТестовыеКонтурыСостояниеПросмотраКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ТестовыеКонтурыСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТестовыеКонтурыУправлениеПоиском" id="26">
+				<AdditionSource>
+					<Item>ТестовыеКонтуры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТестовыеКонтурыУправлениеПоискомКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="ТестовыеКонтурыУправлениеПоискомРасширеннаяПодсказка" id="30"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">ТестовыеКонтурыПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТестовыеКонтурыТестовыйКонтур" id="31">
+					<DataPath>ТестовыеКонтуры.ТестовыйКонтур</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТестовыеКонтурыТестовыйКонтурКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ТестовыеКонтурыТестовыйКонтурРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<InputField name="ТестовыеКонтурыРелиз" id="38">
+					<DataPath>ТестовыеКонтуры.Релиз</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТестовыеКонтурыРелизКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТестовыеКонтурыРелизРасширеннаяПодсказка" id="40"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="НижняяПанель" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нижняя панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нижняя панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НижняяПанельРасширеннаяПодсказка" id="37"/>
+			<ChildItems>
+				<InputField name="ИнтервалРелизов" id="1">
+					<DataPath>ИнтервалРелизов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интервал релизов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интервал релизов (в днях)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ИнтервалРелизовКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ИнтервалРелизовРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ИнтервалРелизовПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button name="Заполнить" id="34">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.Заполнить</CommandName>
+					<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="35"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИнтервалРелизов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал релизов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СДаты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С даты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоДату" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По дату</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТестовыеКонтуры" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тестовые контуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ТестовыйКонтур" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тестовый контур</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТестовыеКонтуры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Релиз" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Релиз</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+		</Command>
+	</Commands>
+</Form>

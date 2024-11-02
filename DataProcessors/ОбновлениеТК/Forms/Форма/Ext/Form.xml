@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="66">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="67"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="177">
+					<Width>56</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="178"/>
+					<ChildItems>
+						<UsualGroup name="Группа3" id="181">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="182"/>
+							<ChildItems>
+								<Button name="ФормаОбновитьВыбранные" id="133">
+									<Type>UsualButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<Width>33</Width>
+									<CommandName>Form.Command.ОбновитьВыбранные</CommandName>
+									<ExtendedTooltip name="ФормаОбновитьВыбранныеРасширеннаяПодсказка" id="134"/>
+								</Button>
+								<Button name="БазыЗахватитьКонфигуратор" id="179">
+									<Type>UsualButton</Type>
+									<Width>38</Width>
+									<CommandName>Form.Command.ЗахватитьКонфигуратор</CommandName>
+									<ExtendedTooltip name="БазыЗахватитьКонфигураторРасширеннаяПодсказка" id="180"/>
+								</Button>
+								<Button name="ОтпуститьКонфигуратор" id="183">
+									<Type>UsualButton</Type>
+									<Width>39</Width>
+									<CommandName>Form.Command.ОтпуститьКонфигуратор</CommandName>
+									<ExtendedTooltip name="ОтпуститьКонфигураторРасширеннаяПодсказка" id="184"/>
+								</Button>
+								<Button name="ОбновитьПринудительно" id="196">
+									<Type>UsualButton</Type>
+									<UserVisible>
+										<xr:Common>true</xr:Common>
+										<xr:Value name="Role.Администратор">true</xr:Value>
+										<xr:Value name="Role.Пользователь">false</xr:Value>
+										<xr:Value name="Role.ВыгружательCF">false</xr:Value>
+									</UserVisible>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<CommandName>Form.Command.ОбновитьПринудительно</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.DataCompositionSettingsWizard</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+									<ExtendedTooltip name="ОбновитьПринудительноРасширеннаяПодсказка" id="197"/>
+								</Button>
+								<Button name="ОтложитьОбновление" id="198">
+									<Type>UsualButton</Type>
+									<UserVisible>
+										<xr:Common>true</xr:Common>
+										<xr:Value name="Role.Администратор">true</xr:Value>
+										<xr:Value name="Role.Пользователь">false</xr:Value>
+										<xr:Value name="Role.ВыгружательCF">false</xr:Value>
+									</UserVisible>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<CommandName>Form.Command.ОтложитьОбновление</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.Пауза</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+									<ExtendedTooltip name="ОтложитьОбновлениеРасширеннаяПодсказка" id="199"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Базы" id="68">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Базы</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="БазыКонтекстноеМеню" id="69"/>
+							<AutoCommandBar name="БазыКоманднаяПанель" id="70">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="БазыРасширеннаяПодсказка" id="71"/>
+							<SearchStringAddition name="БазыСтрокаПоиска" id="72">
+								<AdditionSource>
+									<Item>Базы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БазыСтрокаПоискаКонтекстноеМеню" id="75"/>
+								<ExtendedTooltip name="БазыСтрокаПоискаРасширеннаяПодсказка" id="76"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="БазыСостояниеПросмотра" id="77">
+								<AdditionSource>
+									<Item>Базы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БазыСостояниеПросмотраКонтекстноеМеню" id="80"/>
+								<ExtendedTooltip name="БазыСостояниеПросмотраРасширеннаяПодсказка" id="81"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="БазыУправлениеПоиском" id="82">
+								<AdditionSource>
+									<Item>Базы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="БазыУправлениеПоискомКонтекстноеМеню" id="85"/>
+								<ExtendedTooltip name="БазыУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">БазыВыбор</Event>
+								<Event name="BeforeAddRow">БазыПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">БазыПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="БазыВыбор" id="87">
+									<DataPath>Базы.Выбор</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="БазыВыборКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="БазыВыборРасширеннаяПодсказка" id="89"/>
+								</CheckBoxField>
+								<InputField name="БазыБаза" id="90">
+									<DataPath>Базы.База</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ClearButton>false</ClearButton>
+									<SpinButton>false</SpinButton>
+									<OpenButton>false</OpenButton>
+									<CreateButton>false</CreateButton>
+									<ContextMenu name="БазыБазаКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="БазыБазаРасширеннаяПодсказка" id="92"/>
+									<Events>
+										<Event name="Opening">БазыБазаОткрытие</Event>
+									</Events>
+								</InputField>
+								<InputField name="БазыТестовыйКонтур" id="93">
+									<DataPath>Базы.ТестовыйКонтур</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="БазыТестовыйКонтурКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="БазыТестовыйКонтурРасширеннаяПодсказка" id="95"/>
+								</InputField>
+								<InputField name="БазыДатаРелиза" id="188">
+									<DataPath>Базы.ДатаРелиза</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="БазыДатаРелизаКонтекстноеМеню" id="189"/>
+									<ExtendedTooltip name="БазыДатаРелизаРасширеннаяПодсказка" id="190"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="БлокировкиБаз" id="140">
+							<UserVisible>
+								<xr:Common>true</xr:Common>
+								<xr:Value name="Role.Администратор">true</xr:Value>
+								<xr:Value name="Role.Пользователь">true</xr:Value>
+							</UserVisible>
+							<TitleLocation>Top</TitleLocation>
+							<ReadOnly>true</ReadOnly>
+							<Height>10</Height>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<VerticalStretch>false</VerticalStretch>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>БлокировкиБаз</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Захваченные конфигураторы</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>30</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="БлокировкиБазКонтекстноеМеню" id="141"/>
+							<AutoCommandBar name="БлокировкиБазКоманднаяПанель" id="142">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="БлокировкиБазРасширеннаяПодсказка" id="143"/>
+							<SearchStringAddition name="БлокировкиБазСтрокаПоиска" id="144">
+								<AdditionSource>
+									<Item>БлокировкиБаз</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БлокировкиБазСтрокаПоискаКонтекстноеМеню" id="147"/>
+								<ExtendedTooltip name="БлокировкиБазСтрокаПоискаРасширеннаяПодсказка" id="148"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="БлокировкиБазСостояниеПросмотра" id="149">
+								<AdditionSource>
+									<Item>БлокировкиБаз</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БлокировкиБазСостояниеПросмотраКонтекстноеМеню" id="152"/>
+								<ExtendedTooltip name="БлокировкиБазСостояниеПросмотраРасширеннаяПодсказка" id="153"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="БлокировкиБазУправлениеПоиском" id="154">
+								<AdditionSource>
+									<Item>БлокировкиБаз</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="БлокировкиБазУправлениеПоискомКонтекстноеМеню" id="157"/>
+								<ExtendedTooltip name="БлокировкиБазУправлениеПоискомРасширеннаяПодсказка" id="158"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">БлокировкиБазВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="БлокировкиБазПериод" id="159">
+									<DataPath>БлокировкиБаз.Period</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Захвачено в</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="БлокировкиБазПериодКонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="БлокировкиБазПериодРасширеннаяПодсказка" id="161"/>
+								</LabelField>
+								<LabelField name="БлокировкиБазБаза" id="162">
+									<DataPath>БлокировкиБаз.База</DataPath>
+									<ContextMenu name="БлокировкиБазБазаКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="БлокировкиБазБазаРасширеннаяПодсказка" id="164"/>
+								</LabelField>
+								<LabelField name="БлокировкиБазПользователь" id="168">
+									<DataPath>БлокировкиБаз.Пользователь</DataPath>
+									<ContextMenu name="БлокировкиБазПользовательКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="БлокировкиБазПользовательРасширеннаяПодсказка" id="170"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="ВыгрузкаCF" id="193">
+							<UserVisible>
+								<xr:Common>true</xr:Common>
+								<xr:Value name="Role.Администратор">true</xr:Value>
+								<xr:Value name="Role.Пользователь">false</xr:Value>
+								<xr:Value name="Role.ВыгружательCF">true</xr:Value>
+							</UserVisible>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>style:FormTextColor</TextColor>
+							<Font ref="style:LargeTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выгрузка CF</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>#EFEFEF</BackColor>
+							<BorderColor>#000000</BorderColor>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
+							</Border>
+							<ContextMenu name="ВыгрузкаCFКонтекстноеМеню" id="194"/>
+							<ExtendedTooltip name="ВыгрузкаCFРасширеннаяПодсказка" id="195"/>
+							<Events>
+								<Event name="Click">ВыгрузкаCFНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="Логи" id="96">
+					<ReadOnly>true</ReadOnly>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Логи</DataPath>
+					<RowPictureDataPath>Логи.DefaultPicture</RowPictureDataPath>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>30</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="ЛогиКонтекстноеМеню" id="97"/>
+					<AutoCommandBar name="ЛогиКоманднаяПанель" id="98">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="ФормаОбнова" id="135">
+								<Type>CommandBarButton</Type>
+								<Representation>PictureAndText</Representation>
+								<CommandName>Form.Command.ОбновитьСписок</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.Refresh</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Обновить данные формы</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ФормаОбноваРасширеннаяПодсказка" id="136"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ЛогиРасширеннаяПодсказка" id="99"/>
+					<SearchStringAddition name="ЛогиСтрокаПоиска" id="100">
+						<AdditionSource>
+							<Item>Логи</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЛогиСтрокаПоискаКонтекстноеМеню" id="103"/>
+						<ExtendedTooltip name="ЛогиСтрокаПоискаРасширеннаяПодсказка" id="104"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ЛогиСостояниеПросмотра" id="105">
+						<AdditionSource>
+							<Item>Логи</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЛогиСостояниеПросмотраКонтекстноеМеню" id="108"/>
+						<ExtendedTooltip name="ЛогиСостояниеПросмотраРасширеннаяПодсказка" id="109"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ЛогиУправлениеПоиском" id="110">
+						<AdditionSource>
+							<Item>Логи</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ЛогиУправлениеПоискомКонтекстноеМеню" id="113"/>
+						<ExtendedTooltip name="ЛогиУправлениеПоискомРасширеннаяПодсказка" id="114"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ЛогиПериод" id="115">
+							<DataPath>Логи.Period</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата начала</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЛогиПериодКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="ЛогиПериодРасширеннаяПодсказка" id="117"/>
+						</LabelField>
+						<LabelField name="ЛогиДатаОкончания" id="137">
+							<DataPath>Логи.ДатаОкончания</DataPath>
+							<ContextMenu name="ЛогиДатаОкончанияКонтекстноеМеню" id="138"/>
+							<ExtendedTooltip name="ЛогиДатаОкончанияРасширеннаяПодсказка" id="139"/>
+						</LabelField>
+						<LabelField name="ЛогиБаза" id="118">
+							<DataPath>Логи.База</DataPath>
+							<ContextMenu name="ЛогиБазаКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ЛогиБазаРасширеннаяПодсказка" id="120"/>
+						</LabelField>
+						<LabelField name="ЛогиРезультат" id="127">
+							<DataPath>Логи.Результат</DataPath>
+							<ContextMenu name="ЛогиРезультатКонтекстноеМеню" id="128"/>
+							<ExtendedTooltip name="ЛогиРезультатРасширеннаяПодсказка" id="129"/>
+						</LabelField>
+						<LabelField name="ЛогиЛог" id="124">
+							<DataPath>Логи.Лог</DataPath>
+							<ContextMenu name="ЛогиЛогКонтекстноеМеню" id="125"/>
+							<ExtendedTooltip name="ЛогиЛогРасширеннаяПодсказка" id="126"/>
+						</LabelField>
+						<LabelField name="ЛогиПользователь" id="185">
+							<DataPath>Логи.Пользователь</DataPath>
+							<ContextMenu name="ЛогиПользовательКонтекстноеМеню" id="186"/>
+							<ExtendedTooltip name="ЛогиПользовательРасширеннаяПодсказка" id="187"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="Группа4" id="200">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="201"/>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ОбновлениеТК</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Базы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Базы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Выбор" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="База" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>База</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Базы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТестовыйКонтур" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тестовый контур</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТестовыеКонтуры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаРелиза" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата релиза</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Логи" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.Логи</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Период</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаОкончания</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="БлокировкиБаз" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Блокировки баз</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	БлокировкиБазСрезПоследних.Период,
+	БлокировкиБазСрезПоследних.База,
+	БлокировкиБазСрезПоследних.Пользователь,
+	БлокировкиБазСрезПоследних.Состояние,
+	БлокировкиБазСрезПоследних.ЗавершениеРаботы
+ИЗ
+	РегистрСведений.БлокировкиБаз.СрезПоследних КАК БлокировкиБазСрезПоследних
+ГДЕ
+	БлокировкиБазСрезПоследних.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияБлокировокБаз.Захвачена)</QueryText>
+				<MainTable>InformationRegister.БлокировкиБаз.SliceLast</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьВыбранные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить выбранные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить выбранные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьВыбранные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьСписок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Action>Обнова</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗахватитьКонфигуратор" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Захватить конфигуратор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Захватить конфигуратор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗахватитьКонфигуратор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтпуститьКонфигуратор" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отпустить конфигуратор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отпустить конфигуратор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтпуститьКонфигуратор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыгрузитьCF" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить CF</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить CF</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьCF</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьПринудительно" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить принудительно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В принудительном порядке обновляет выбранные базы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьПринудительно</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтложитьОбновление" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отложить обновление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переводит базы из списка отмеченных, находящиеся в состоянии "ОжидаетсяОтключениеПользователей", в состояние "ОбновлениеОтложено".</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтложитьОбновление</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

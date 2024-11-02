@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<SubsystemsVisibility>
+		<Subsystem name="Subsystem.Обновление">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.Пользователь">false</xr:Value>
+			</Visibility>
+		</Subsystem>
+		<Subsystem name="Subsystem.ОбновлениеТК">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.Администратор">false</xr:Value>
+			</Visibility>
+		</Subsystem>
+	</SubsystemsVisibility>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Обновление</Subsystem>
+		<Subsystem>Subsystem.ОбновлениеТК</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>

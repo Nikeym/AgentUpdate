@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Группа2" id="34">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<Page name="Основное" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОсновноеРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="28">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="29"/>
+							<ChildItems>
+								<InputField name="Код" id="1">
+									<DataPath>Объект.Code</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+								</InputField>
+								<InputField name="ТестовыйКонтур" id="25">
+									<DataPath>Объект.ТестовыйКонтур</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ТестовыйКонтурКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ТестовыйКонтурРасширеннаяПодсказка" id="27"/>
+									<Events>
+										<Event name="OnChange">ТестовыйКонтурПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Наименование" id="4">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Сервер" id="7">
+							<DataPath>Объект.Сервер</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СерверКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="СерверРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="Пользователь" id="16">
+							<DataPath>Объект.Пользователь</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПользовательКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="Пароль" id="19">
+							<DataPath>Объект.Пароль</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПарольКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="ПутьКФайлуЛогов" id="22">
+							<DataPath>Объект.ПутьКФайлуЛогов</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПутьКФайлуЛоговКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ПутьКФайлуЛоговРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<UsualGroup name="Группа3" id="52">
+							<VerticalStretch>false</VerticalStretch>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<InputField name="Порт" id="10">
+									<DataPath>Объект.ПортКластера</DataPath>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>true</HorizontalStretch>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧГ=0</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ПортКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ПортРасширеннаяПодсказка" id="12"/>
+								</InputField>
+								<InputField name="ПортКластера" id="13">
+									<DataPath>Объект.ПортСервера</DataPath>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>true</HorizontalStretch>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧГ=0</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ПортКластераКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ПортКластераРасширеннаяПодсказка" id="15"/>
+								</InputField>
+								<CheckBoxField name="Административная" id="54">
+									<DataPath>Объект.Административная</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АдминистративнаяКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="АдминистративнаяРасширеннаяПодсказка" id="56"/>
+								</CheckBoxField>
+								<CheckBoxField name="CF" id="57">
+									<DataPath>Объект.CF</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="CFКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="CFРасширеннаяПодсказка" id="59"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ДанныеХранилища" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные хранилища</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные хранилища</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДанныеХранилищаРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<InputField name="Хранилище" id="38">
+							<DataPath>Объект.Хранилище</DataPath>
+							<ContextMenu name="ХранилищеКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ХранилищеРасширеннаяПодсказка" id="40"/>
+						</InputField>
+						<InputField name="ПользовательХранилища" id="41">
+							<DataPath>Объект.ПользовательХранилища</DataPath>
+							<PasswordMode>true</PasswordMode>
+							<ContextMenu name="ПользовательХранилищаКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ПользовательХранилищаРасширеннаяПодсказка" id="43"/>
+						</InputField>
+						<InputField name="ПарольХранилища" id="44">
+							<DataPath>Объект.ПарольХранилища</DataPath>
+							<ContextMenu name="ПарольХранилищаКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ПарольХранилищаРасширеннаяПодсказка" id="46"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ВебСервисы" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Веб сервисы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Веб сервисы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ВебСервисыРасширеннаяПодсказка" id="48"/>
+					<ChildItems>
+						<InputField name="ExecuteCode" id="49">
+							<DataPath>Объект.ExecuteCode</DataPath>
+							<ContextMenu name="ExecuteCodeКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ExecuteCodeРасширеннаяПодсказка" id="51"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Базы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

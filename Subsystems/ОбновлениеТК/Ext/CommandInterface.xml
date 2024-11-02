@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<CommandsVisibility>
+		<Command name="DataProcessor.ОбновлениеТК.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="0:2466f6e7-a59d-4540-9aa1-4658b8b3f091">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+</CommandInterface>
